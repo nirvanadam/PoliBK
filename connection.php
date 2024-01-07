@@ -1,12 +1,12 @@
 <?php
 $databaseHost = 'localhost';
-$databaseName = 'poli';
 $databaseUsername = 'root';
 $databasePassword = '';
+$databaseName = 'poli';
 
-$mysqli = mysqli_connect($databaseHost, $databaseUsername, $databasePassword, $databaseName);
+$conn = mysqli_connect($databaseHost, $databaseUsername, $databasePassword, $databaseName);
 
-if (!$mysqli) {
+if (!$conn) {
     die("Koneksi gagal: " . mysqli_connect_error());
 }
 ?>

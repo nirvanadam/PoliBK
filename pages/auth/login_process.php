@@ -17,11 +17,11 @@ if ($username === 'admin1') {
 
 // Query untuk memeriksa keberadaan pengguna
 $query = "SELECT * FROM users WHERE username='$username' AND password='$password' AND role='$role'";
-$result = mysqli_query($mysqli, $query);
+$result = mysqli_query($conn, $query);
 
 // Periksa apakah query berhasil dijalankan
 if (!$result) {
-    die("Query gagal: " . mysqli_error($mysqli));
+    die("Query gagal: " . mysqli_error($conn));
 }
 
 // Periksa apakah pengguna ditemukan
@@ -46,5 +46,5 @@ if (mysqli_num_rows($result) > 0) {
 mysqli_free_result($result);
 
 // Tutup koneksi database
-mysqli_close($mysqli);
+mysqli_close($conn);
 ?>

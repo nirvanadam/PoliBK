@@ -1,73 +1,27 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>AdminLTE 3 | Log in (v2)</title>
-
-  <!-- Google Font: Source Sans Pro -->
-  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,700&display=fallback">
-  <!-- Font Awesome -->
-  <link rel="stylesheet" href="../../plugins/fontawesome-free/css/all.min.css">
-  <!-- icheck bootstrap -->
-  <link rel="stylesheet" href="../../plugins/icheck-bootstrap/icheck-bootstrap.min.css">
-  <!-- Theme style -->
-  <link rel="stylesheet" href="../../dist/css/adminlte.min.css">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login Dokter</title>
+    <script src="https://cdn.tailwindcss.com"></script>
 </head>
-<body class="hold-transition login-page">
-<div class="login-box">
-  <!-- /.login-logo -->
-  <div class="card card-outline card-primary">
-    <div class="card-header text-center">
-      <a href="../../index2.html" class="h1"><b>Poli</b>BK</a>
-    </div>
-    <div class="card-body">
-      <p class="login-box-msg">Login Dokter</p>
 
-      <form action="login_process.php" method="post">
-        <div class="input-group mb-3">
-          <input type="text" class="form-control" placeholder="Username" name="username" required>
-          <div class="input-group-append">
-            <div class="input-group-text">
-              <span class="fas fa-envelope"></span>
-            </div>
-          </div>
+<body class="flex items-center justify-center h-[100vh] bg-[#1A1F2B]">
+    <form action="login_process.php" method="post" class="bg-white w-[450px] px-6 py-10 rounded-lg">
+        <h1 class="text-center text-3xl font-semibold">Login Dokter</h1>
+        <div class="flex flex-col gap-5 mt-7">
+            <input type="text" name="username" id="" required placeholder="Username"
+                class="bg-gray-200 px-5 py-3 outline-none rounded-lg">
+            <input type="password" name="password" id="" required placeholder="Password"
+                class="bg-gray-200 px-5 py-3 outline-none rounded-lg">
+            <input type="hidden" name="role" value="dokter">
+
+            <button type="submit" class="mt-3 bg-[#2C3E50] text-white py-3 font-medium rounded-lg">Login</button>
         </div>
-
-        <div class="input-group mb-3">
-          <input type="password" class="form-control" placeholder="Password" name="password" required>
-          <div class="input-group-append">
-            <div class="input-group-text">
-              <span class="fas fa-lock"></span>
-            </div>
-          </div>
-        </div>
-
-        <input type="hidden" name="role" value="dokter">
-
-          <!-- /.col -->
-          <div class="col-4">
-            <button type="submit" class="btn btn-primary btn-block">Login In</button>
-          </div>
-          <!-- /.col -->
-        </div>
-      </form>
-
-      <p class="ml-4">
-        <a href="register.html" class="text-center">Register a new membership</a>
-      </p>
-    </div>
-    <!-- /.card-body -->
-  </div>
-  <!-- /.card -->
-</div>
-<!-- /.login-box -->
-
-<!-- jQuery -->
-<script src="../../plugins/jquery/jquery.min.js"></script>
-<!-- Bootstrap 4 -->
-<script src="../../plugins/bootstrap/js/bootstrap.bundle.min.js"></script>
-<!-- AdminLTE App -->
-<script src="../../dist/js/adminlte.min.js"></script>
+    </form>
 </body>
+
 </html>
